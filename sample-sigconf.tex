@@ -1,54 +1,4 @@
-%%
-%% This is file `sample-sigconf.tex',
-%% generated with the docstrip utility.
-%%
-%% The original source files were:
-%%
-%% samples.dtx  (with options: `sigconf')
-%% 
-%% IMPORTANT NOTICE:
-%% 
-%% For the copyright see the source file.
-%% 
-%% Any modified versions of this file must be renamed
-%% with new filenames distinct from sample-sigconf.tex.
-%% 
-%% For distribution of the original source see the terms
-%% for copying and modification in the file samples.dtx.
-%% 
-%% This generated file may be distributed as long as the
-%% original source files, as listed above, are part of the
-%% same distribution. (The sources need not necessarily be
-%% in the same archive or directory.)
-%%
-%%
-%% Commands for TeXCount
-%TC:macro \cite [option:text,text]
-%TC:macro \citep [option:text,text]
-%TC:macro \citet [option:text,text]
-%TC:envir table 0 1
-%TC:envir table* 0 1
-%TC:envir tabular [ignore] word
-%TC:envir displaymath 0 word
-%TC:envir math 0 word
-%TC:envir comment 0 0
-%%
-%%
-
-
-\begin{filecontents}{Bibliotest.bib}
-@article{BasePaper,
-author = {KTF},
-title = {Test},
-journal = {},
-year = {2021}
-}
-\end{filecontents}
-
-
-
-%% The first command in your LaTeX source must be the \documentclass command.
-\documentclass[sigconf]{acmart}
+\documentclass[sigconf,noacm,review]{acmart}
 
 %%
 %% \BibTeX command to typeset BibTeX logo in the docs
@@ -139,7 +89,7 @@ year = {2021}
   Dieser Bericht enthält die Resultate unserer Gruppenarbeit, welche im Zuge des 
   Fachprojekts Routingalgorithmen im Sommersemester 2022 stattgefunden hat. 
   Die Projekte basieren dabei jeweils auf dem Paper ``Traffic engineering with joint link
-  weight and segment optimization'' \cite[1]{BasePaper} und den zugehörigen Repositories auf GitHub.
+  weight and segment optimization'' \cite[1]{originPaper} und den zugehörigen Repositories auf GitHub.
   In Projekt 1 steht dabei die Abwandlung von in Python implementierten Routing-Algorithmen
   im Vordergrund. In Projekt 2 werden diese Algorithmen dann in Mininet-Experimenten auf Basis
   des Papers verwendet.
@@ -358,21 +308,30 @@ Offensichtlich führt die schon das entfernen eines Waypoints zu einer deutliche
 
 
 \section{Replikation der Ergebnisse einer anderen Gruppe}
-Zu Ende der Bearbeitungszeit fand jeweils ein sogenannter Code-Freeze statt, bei dem die teilnehmenden 
-Gruppen ihre Arbeit untereinander bewerten und replizieren sollten. In diesem Abschnitt werden die implementierten Ideen
-der von uns betrachteten Gruppe kurz erklärt. Danach wird auf weitere Beobachtungen eingegangen.
+Zu Ende der Bearbeitungszeit fand jeweils ein sogenannter Code-Freeze statt, bei dem die teilnehmenden Gruppen ihre Arbeit untereinander bewerten und replizieren sollten. 
 \subsection{Code-Freeze - Projekt 1}
 Während der Bearbeitungszeit von Projekt 1 würde das folgende Repository repliziert: EINFÜGEN.
 Die Gruppe bot dabei zwei Wege an, ihre Experimente zu replizieren. Neben der Bereitstellungsform, in welchem auch der Code des Base-Papers bereitgestellt wird, ist auch eine vorkonfigurierte virtuelle Maschine verfügbar.
 Die gegebenen Dateien konnten ohne Probleme ausgeführt werden. Typischerweise muss allerdings für die Ausführung auf durchschnittlicher Hardware viel Zeit eingeplant werden.
-So dauerte die Ausführung des Experiments, welches mehrere Topologien nutzt, mehr als einen Tag. Zusätzlich zu den bestehenden Plotter wurde auch zusätzlich ein weiteres Diagramm erzeugt, 
-welches die tatsächliche Ausführungszeit der Algorithmen darstellt. Allerdings hätte die Darstellung für die Ausführung bei künstlichen Demands besser skaliert sein, können, da einige in der Legende genannten Algorithmen im Plot nicht zu sehen sind, siehe beispielsweise IndependentPathWaypoints. 
+So dauerte die Ausführung des Experiments, welches mehrere Topologien nutzt, mehr als einen Tag. 
+Die aus den Datei gewonnen Plots entsprachen denen, welche die Gruppe selbst angegeben hatte.
+Zusätzlich zu den bestehenden Plotter wurde auch zusätzlich ein weiteres Diagramm erzeugt, 
+welches die tatsächliche Ausführungszeit der Algorithmen darstellt. Allerdings hätte die Darstellung für die Ausführung bei künstlichen Demands besser skaliert sein können, da einige in der Legende genannten Algorithmen im Plot nicht zu sehen sind, siehe beispielsweise IndependentPathWaypoints. 
 \begin{figure}[h]
   \centering
   \includegraphics[width=\linewidth]{abbildungen/replik1}
   \caption{Beispielplot aus der Replikation der anderen Gruppe}
 \end{figure}
+
 \subsection{Code-Freeze - Projekt 2}
+Auch das zweite Projekt der anderen Gruppe basierte auf den Grundideen von Projekt 1 und wurde in Form von Experimenten mit Nanonet durchgeführt. Auch hier ist wieder positiv anzumerken, dass der Code wieder zusätzlich zum bestehenden Weg auch über ein vorbereitetes VM-Image direkt ausgeführt werden kann. Die zur Ausführung nötigen Schritte sind zudem nochmal beschrieben. \\
+Bei der reinen Ausführung des Codes hatten wir keine Probleme. Allerdings waren nachträglich einige Modifikationen an der Datei nötig, welche zum Plotten der Ergebnisse benötigt wird. Nach den Modifikationen haben wir folgenden Boxplot erhalten:
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{abbildungen/boxplot}
+  \caption{Erzeugter Boxplot aus der zweiten Replikation}
+\end{figure}
+
 
 
 %%
@@ -386,7 +345,9 @@ welches die tatsächliche Ausführungszeit der Algorithmen darstellt. Allerdings
 %% The next two lines define the bibliography style to be used, and
 %% the bibliography file.
 \bibliographystyle{ACM-Reference-Format}
-\bibliography{Bibliotest}
+\bibliography{ref}
+
+\appendix
 
 %%
 %% If your work has an appendix, this is the place to put it.
