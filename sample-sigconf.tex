@@ -167,10 +167,10 @@ konnten offensichtlich wichtige Wegpunkte aufgrund der Beschränkung nicht erzeu
 
 \subsection{Nodes-kWP-JointHeur}
 In unserer dritten Abwandlung betrachten wir ebenfalls eine Beschränkung der nutzbaren Wegpunkte, dieses Mal jedoch auf einzelne Knoten und nicht auf die gesamte Topologie bezogen.
-Ein Array $K$ ordnet jedem Knoten $v$ einen Parameter $k_v$ (im Folgenden allgemein als $k$ bezeichnet) zu, welcher angibt, wie oft dieser Knoten als Wegpunkt verwendet werden darf. Hierbei ist insbesondere interessant, welchen Einfluss die verschiedenen Werte für $k$ auf die Performance haben und ob es sinnvoll und durchsetzbar ist, bestimmte Nodes durch $k=0$ zu sperren, sodass diese nicht als Wegpunkt fungieren können.
+Ein Array $K$ ordnet jedem Knoten $v$ einen Parameter $k_v$ (im Folgenden allgemein als $k$ bezeichnet) zu, welcher angibt, wie oft dieser Knoten als Wegpunkt verwendet werden darf. Hierbei ist insbesondere interessant, welchen Einfluss die verschiedenen Werte für $k$ auf die Performance haben und ob es sinnvoll und durchsetzbar ist, bestimmte Knoten durch $k=0$ zu sperren, sodass diese nicht als Wegpunkt fungieren können. Zur Bestimmung der Priorisierung verschiedener Knoten können verschiedene Kriterien herangezogen werden, wie z.B. deren Leistungskapazitäten oder Sicherheitsschwächen.
 \\
 \\
-Ein Problem bei der Implementierung ist jedoch, geeignete Werte für $K$ zu finden. Welche Werte überhaupt gültig sind, hängt von der Topologie ab und kann somit grundsätzlich nicht verallgemeinert werden. Damit es trotzdem für alle Topologien einheitlich und leicht generierbar ist und weil uns insbesondere das Sperren von Knoten interessiert hat, haben wir uns in der praktischen Umsetzung dafür entschieden, jeden $c_{gen}$-ten (wobei $c_{gen} \in N$) Knoten beliebig oft als Wegpunkt zu erlauben und die anderen Knoten als Wegpunkte zu sperren ($k=0$). So sind z. B. bei  $c_{gen} = 4$ 75\% der Knoten gesperrt, während 25\% der Knoten beliebig oft als Wegpunkte verwendet werden dürfen. Im Folgenden sprechen wir auch von einer $\frac{1}{c}$-JointHeur[1,2].
+Bei der praktischen Umsetzung ergibt sich die Frage nach der Bestimmung von $K$. Da im Rahmen unserer Experimente zahlreiche Topologien und Anfrageverteilungen verwendet werden, ist es nicht praktikabel unser $K$ auf jede dieser Konstellationen anzupassen. Daher verwenden wir eine allgemeine Vorschrift zur Generierung von $K$. Damit es für alle Topologien einheitlich und leicht generierbar ist und weil uns insbesondere das Sperren von Knoten interessiert hat, haben wir uns in der praktischen Umsetzung dafür entschieden, jeden $c_{gen}$-ten (wobei $c_{gen} \in N$) Knoten beliebig oft als Wegpunkt zu erlauben und die anderen Knoten als Wegpunkte zu sperren ($k=0$). So sind z. B. bei  $c_{gen} = 4$ 75\% der Knoten gesperrt, während 25\% der Knoten beliebig oft als Wegpunkte verwendet werden dürfen. Im Folgenden sprechen wir auch von einer $\frac{1}{c}$-JointHeur[1,2].
 
 
 \begin{figure}[h]
@@ -200,8 +200,7 @@ Wie sich anhand der Durchführung auf der Topologie Geant erkennen lässt, wird,
   \caption{1/3N-JointHeur auf verschiedenen Topologien getestet}
 \end{figure}
 
-In Abbildung 11 wird nochmal deutlich, dass die 1/3N-JointHeur nicht zwingend schlechter als JointHeur. Es hängt auch von der gewählten Topologie ab.
-
+In Abbildung 14 wird nochmal deutlich, dass die 1/3N-JointHeur nicht zwingend schlechter als JointHeur. Es hängt auch von der gewählten Topologie ab. Einige Topologien sind nicht besonders empfänglich für Wegpunkte, sodass selbst eine partielle Blockierung keine Veränderung stimuliert.
 
 \section{Projekt 2 - Experimente in Mininet}
 \subsection{Einführung}
