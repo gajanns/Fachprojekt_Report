@@ -212,7 +212,7 @@ Stattdessen haben wir ein in Nanonet implementiertes Simulationsframework genutz
 Um die beschriebenen Experimente durchzuführen, musste zunächst die Nanonet-Umgebung eingerichtet werden. Die Instruktionen aus dem zugehörigen GitHub-Repository konnten hierfür genutzt werden, jedoch stießen wir an mehreren Stellen auf Probleme. Unter kamen wir zum Schluss, dass die Linux-Umgebung bestimmte Vorrausetzungen erfüllen sollte. Insbesondere konnten wir die Experimente nicht in einer Linux-Umgebung starten, die auf dem Windows-Subsystem basiert.
 
 \subsection{kWPO-JointHeur}
-Der Algorithmus kWPO-JointHeur versucht einer Anfrage mehrere Wegpunkte zuzuweisen, um damit die Auslastung zu verbessern. Daher suchen wir eine Topologie, die von mehreren Wegpunkten profitieren kann. Dazu modifizieren wir die Joint-Topologie, die bereits im ursprünglichen Paper verwendet wurde. Durch die Duplizierung eines Teilbereiches dieser Topologie, entsteht eine zweiter Bereich, welcher für Wegpunkte empfänglich wird[1].
+Der Algorithmus kWPO-JointHeur versucht einer Anfrage mehrere Wegpunkte zuzuweisen, um damit die Auslastung zu verbessern. Daher suchen wir eine Topologie, die von mehreren Wegpunkten profitieren kann. Dazu modifizieren wir die Joint-Topologie, die bereits im ursprünglichen Paper verwendet wurde. Durch die Duplizierung eines Teilbereiches dieser Topologie, entsteht eine zweiter Bereich, welcher ebenfalls für Wegpunkte empfänglich wird[1]. Da eine Vergrößerung der Topologie mit einer entsprechenden erhöhten Anforderung an die Kapazitäten des Testrechners einhergeht, schränken wir uns auf maximal 2 Wegpunkten pro Anfrage ein.
 \begin{figure}[h]
   \centering
   \includegraphics[width=\linewidth]{abbildungen/kWPO_topo.png}
@@ -224,7 +224,7 @@ Der Algorithmus kWPO-JointHeur versucht einer Anfrage mehrere Wegpunkte zuzuweis
   \includegraphics[width=\linewidth]{abbildungen/kWPOJoint_Plot.png}
   \caption{Ergebnis des Experiments}
 \end{figure}
-In Abbildung 13 können wir sehen, dass die Konfiguration mit 2 Wegpunkten einen sehr viel besseren MLU-Wert erzeugt, als die Steuerung über die reine Gewichtung von Kanten.
+In Abbildung 16 können wir sehen, dass die Konfiguration mit 2 Wegpunkten einen sehr viel besseren MLU-Wert erzeugt als die Steuerung über die reine Gewichtung von Kanten.
 
 \subsection{Topo-kWP-JointHeur}
 Unsere zweite Abwandlung konnte recht einfach implementiert werden. Zur Erinnerung: bei der zweiten Idee geht es um die Beschränkung der nutzbaren Waypoints für die gesamte Topologie. Da diese Abwandlung niemals zu einer besseren MLU führen kann, wird das Resultat dieses Algorithmus nicht besonders gut dargestellt, sondern eher schlecht.
