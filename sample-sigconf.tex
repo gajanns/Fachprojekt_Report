@@ -171,6 +171,12 @@ Die Anzahl der Iterationen soll dabei durch einen Parameter $k$ angegeben werden
   \caption{Konzept von kWPO-JointHeur}
   \Description{A woman and a girl in white dresses sit in an open car.}
 \end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{abbildungen/pseudo1}
+  \caption{Pseudocode zu kWPo-JointHeur}
+\end{figure}
 Zur weiteren Optimierung von kWPO-JointHeur betrachten wir die GreedyWPO-Komponente genauer. In dieser Routine werden die Anfragen zunächst nach ihrem Volumen sortiert und dann in dieser Reihenfolge hinsichtlich der Wegpunkte bearbeitet. Es fällt auf, dass die Reihenfolge einen Einfluss auf die Performance haben muss, da bereits gesetzte Wegpunkte nicht gelöscht werden und unbearbeitete Anfragen nicht berücksichtigt werden. Jedoch berücksichtigt das verwendete Sortierkriterium nicht die zugrunde liegende Topologie.
 Neben dem Anfragevolumen führen wir das zusätzliche Sortierkriterium der Knotenkapazität ein. Die Knotenkapazität eines Knoten sei durch die Summe der verbundenen Kantenkapazitäten gegeben.
 Wie definieren die Knotenkapazität $C_v$ wie folgt: \begin{center} $c_v = \sum_{e_{v_{i}} \in E} c(e_{v_i})$\end{center}
@@ -216,6 +222,11 @@ GreedyWPO-Komponente des JointHeur-Algorithmus eingepflegt werden. $k$ fungiert 
 einen Waypoint wählen, so würde k verringert, bis k am Ende 0 beträgt. Somit kann sichergestellt werden, dass nur die
 erlaubte Anzahl an Wegpunkten erzeugt wird.
 \\
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{abbildungen/pseudo2}
+  \caption{Pseudocode zu Topo-kWP-JointHeur}
+\end{figure}
 Nach der Implementierung haben wir den abgewandelten Algorithmus für mehrere Werte für $k$ ausgeführt. Die folgenden Plots stellen die interessantesten Werte dar:
 \begin{figure}[h]
   \centering
@@ -249,6 +260,13 @@ Ein Array $K$ ordnet jedem Knoten $v$ einen Parameter $k_v$ (im Folgenden allgem
 \\
 \\
 Ein Problem bei der Implementierung ist jedoch, geeignete Werte für $K$ zu finden. Welche Werte überhaupt gültig sind, hängt von der Topologie ab und kann somit grundsätzlich nicht verallgemeinert werden. Damit es trotzdem für alle Topologien einheitlich und leicht generierbar ist und weil uns insbesondere das Sperren von Knoten interessiert hat, haben wir uns in der praktischen Umsetzung haben dafür entschieden, jeden $c_{gen}$-ten (wobei $c_{gen} \in N$) Knoten beliebig oft als Wegpunkt zu erlauben und die anderen Knoten als Wegpunkte zu sperren ($k=0$). So sind z. B. bei  $c_{gen} = 4$ 75\% der Knoten gesperrt, während 25\% der Knoten beliebig oft als Wegpunkte verwendet werden dürfen. Im Folgenden sprechen wir auch von einer $\frac{1}{c}$-JointHeur.
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{abbildungen/pseudo3}
+  \caption{Pseudocode zu Nodes-kWP-JointHeur}
+\end{figure}
 
 \begin{figure}[h]
   \centering
