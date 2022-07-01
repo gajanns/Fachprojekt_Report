@@ -92,9 +92,8 @@
   Fachprojekts Routingalgorithmen im Sommersemester 2022 stattgefunden hat. 
   Die Projekte basieren dabei jeweils auf dem Paper ``Traffic engineering with joint link
   weight and segment optimization'' [1] und den zugehörigen Repositories auf GitHub.
-  In Projekt 1 steht dabei die Abwandlung von in Python implementierten Routing-Algorithmen
-  im Vordergrund. In Projekt 2 werden diese Algorithmen dann in Mininet-Experimenten auf Basis
-  des Papers verwendet. Die nachfolgenden Resultate können über die im Readme dieses Repositories zu findenden Links
+  In Projekt 1 steht dabei die Konzipierung von alternativen Routingalgorithmen und deren Evaluation mithilfe der python-basierten Testumgebung des Base-Papers im Vordergrund.
+  In Projekt 2 werden diese Algorithmen dann alternativ in Mininet-Experimenten auf Basis des Base-Papers evaluiert. Die nachfolgenden Resultate können über die im Readme dieses Repositories zu findenden Links
   ausgecheckt werden. 
   \end{abstract}
 \keywords{JointHeur, waypoints, GreedyWPO}
@@ -128,8 +127,8 @@ Als Zielfunktion haben wir weiterhin (eine möglichst niedrige) MLU gewählt. Al
 zu dem oben genannten Paper [1] zugehörig ist.
 
 \subsection{kWPO-JointHeur}
-Die im Paper [1] beschriebene JointHeur-Routine sieht die Wahl von maximal einem Wegpunkt pro Demand vor. Um diese Einschränkung zu umgehen, definieren wir eine modifizierte Routine mit dem Namen kWPO-JointHeur. Im Gegensatz zur JointHeur soll hier die Routine zur Generierung von Wegpunkten, GreedyWPO, mehrfach wiederholt werden. Dabei soll in jeder Iteration die durch Wegpunkte modifizierte Anfrageliste der letzten Iteration als Eingabe eingespeist werden. 
-Die Anzahl der Iterationen soll dabei durch einen Parameter $k$ angegeben werden können. Für $k = 0$ würde die Ausführung des Algorithmus derer von HeurOSPF entsprechen. Der normale JointHeur-Algorithmus aus dem Paper entspricht der Ausführung mit $k=1$. Für Werte $k > 1$ erzeugt die $k$-fache Anwendung maximal $2^{k}-1$ Wegpunkte pro Demand[1].
+Die im Paper [1] beschriebene JointHeur-Routine sieht die Wahl von maximal einem Wegpunkt pro Anfrage vor. Um diese Einschränkung zu umgehen, definieren wir eine modifizierte Routine mit dem Namen kWPO-JointHeur. Im Gegensatz zur JointHeur soll hier die Routine zur Generierung von Wegpunkten, GreedyWPO, mehrfach wiederholt werden. Dabei soll in jeder Iteration die durch Wegpunkte modifizierte Anfrageliste der letzten Iteration als Eingabe eingespeist werden. 
+Die Anzahl der Iterationen soll dabei durch einen Parameter $k$ angegeben werden können. Für $k = 0$ würde die Ausführung des Algorithmus derer von HeurOSPF, welche eine Gewichtung der Links vornimmt, entsprechen. Der normale JointHeur-Algorithmus aus dem Paper entspricht der Ausführung mit $k=1$. Für Werte $k > 1$ erzeugt die $k$-fache Anwendung maximal $2^{k}-1$ Wegpunkte pro Anfrage[1].
 \begin{figure}[h]
   \centering 
   \includegraphics[width=\linewidth]{abbildungen/kWPO_Concept.png}
@@ -164,7 +163,7 @@ Ein erstes Beispiel für die Effektivität dieser Abwandlung kann in Abbildung 3
   \caption{Verschiedene D- und C-JointHeur bei Verwendung tatsächlicher Demands}
   \Description{A woman and a girl in white dresses sit in an open car.}
 \end{figure}
-In Abbildung 4 werden die Abwandlungen mit den Parametern 1,2,3 und 4 betrachtet. Zusätzlich wird zu jedem dieser Fälle auch die Sortierung nach Capacity gegenübergestellt. Für das Ergebnis wurden echte Demands verwendet. Neben der Beobachtung, dass die Sortierung nach Capacity durchaus einen Unterschied macht, wird auch deutlich, dass mit höheren Werten für k auch eine bessere MLU einhergeht. In Abbildung 3 wird das Ergebnis für die Abwandlung 4C des JointHeur nochmal auf weiteren Topologien getestet und erreicht fast überall dort bessere Ergebnisse[1].
+In Abbildung 4 werden die Abwandlungen mit den Parametern 1,2,3 und 4 betrachtet. Zusätzlich wird zu jedem dieser Fälle auch die Sortierung nach Capacity gegenübergestellt. Für das Ergebnis wurden echte Anfragen hinsichtlich ihres Volumens skaliert. Neben der Beobachtung, dass die Sortierung nach Capacity durchaus einen Unterschied macht, wird auch deutlich, dass mit höheren Werten für k auch eine bessere MLU einhergeht. In Abbildung 3 wird das Ergebnis für die Abwandlung 4C des JointHeur nochmal auf weiteren Topologien getestet und erreicht fast überall dort bessere Ergebnisse[1].
 \begin{figure}[h]
   \centering 
   \includegraphics[width=\linewidth]{abbildungen/PNG-Bild 3}
@@ -222,7 +221,7 @@ In unserer dritten Abwandlung betrachten wir ebenfalls eine Beschränkung der nu
 Ein Array $K$ ordnet jedem Knoten $v$ einen Parameter $k_v$ (im Folgenden allgemein als $k$ bezeichnet) zu, welcher angibt, wie oft dieser Knoten als Wegpunkt verwendet werden darf. Hierbei ist insbesondere interessant, welchen Einfluss die verschiedenen Werte für $k$ auf die Performance haben und ob es sinnvoll und durchsetzbar ist, bestimmte Nodes durch $k=0$ zu sperren, sodass diese nicht als Wegpunkt fungieren können.
 \\
 \\
-Ein Problem bei der Implementierung ist jedoch, geeignete Werte für $K$ zu finden. Welche Werte überhaupt gültig sind, hängt von der Topologie ab und kann somit grundsätzlich nicht verallgemeinert werden. Damit es trotzdem für alle Topologien einheitlich und leicht generierbar ist und weil uns insbesondere das Sperren von Knoten interessiert hat, haben wir uns in der praktischen Umsetzung haben dafür entschieden, jeden $c_{gen}$-ten (wobei $c_{gen} \in N$) Knoten beliebig oft als Wegpunkt zu erlauben und die anderen Knoten als Wegpunkte zu sperren ($k=0$). So sind z. B. bei  $c_{gen} = 4$ 75\% der Knoten gesperrt, während 25\% der Knoten beliebig oft als Wegpunkte verwendet werden dürfen. Im Folgenden sprechen wir auch von einer $\frac{1}{c}$-JointHeur[1,2].
+Ein Problem bei der Implementierung ist jedoch, geeignete Werte für $K$ zu finden. Welche Werte überhaupt gültig sind, hängt von der Topologie ab und kann somit grundsätzlich nicht verallgemeinert werden. Damit es trotzdem für alle Topologien einheitlich und leicht generierbar ist und weil uns insbesondere das Sperren von Knoten interessiert hat, haben wir uns in der praktischen Umsetzung dafür entschieden, jeden $c_{gen}$-ten (wobei $c_{gen} \in N$) Knoten beliebig oft als Wegpunkt zu erlauben und die anderen Knoten als Wegpunkte zu sperren ($k=0$). So sind z. B. bei  $c_{gen} = 4$ 75\% der Knoten gesperrt, während 25\% der Knoten beliebig oft als Wegpunkte verwendet werden dürfen. Im Folgenden sprechen wir auch von einer $\frac{1}{c}$-JointHeur[1,2].
 
 
 \begin{figure}[h]
@@ -257,9 +256,12 @@ In Abbildung 11 wird nochmal deutlich, dass die 1/3N-JointHeur nicht zwingend sc
 
 \section{Projekt 2 - Experimente in Mininet}
 \subsection{Einführung}
-Auch die zweite Reihe von Experimenten basiert auf dem genanten Paper. Allerdings stand hier nicht primär die Implementierung in Python im Vordergrund. Ziel der Experimente war es stattdessen,
-unsere Abwandlungen aus Projekt 1 möglichst unter möglichst echten Bedingungen zu testen. Für die Simulation des Netzes haben wir keine tatsächliche Hardware verwendet.
+Auch die zweite Reihe von Experimenten basiert auf dem genannten Paper. Allerdings stand hier nicht primär die Implementierung in Python im Vordergrund. Ziel der Experimente war es stattdessen,
+unsere Abwandlungen aus Projekt 1 unter möglichst echten Bedingungen zu testen. Für die Simulation des Netzes haben wir keine tatsächliche Hardware verwendet.
 Stattdessen haben wir ein in Nanonet implementiertes Simulationsframework genutzt, um im Linux-Kernel ein realistisches Netzwerk abzubilden und das Verhalten der Algorithmen unter realen Bedingungen zu testen. Ziel war es zudem, unsere Ideen durch geeignete Skalierungen möglichst gut dastehen zu lassen[1].
+
+\subsection{Vorbereitung}
+Um die beschriebenen Experimente durchzuführen, musste zunächst die Nanonet-Umgebung eingerichtet werden. Die Instruktionen aus dem zugehörigen GitHub-Repository konnten hierfür genutzt werden, jedoch stießen wir an mehreren Stellen auf Probleme. Unter kamen wir zum Schluss, dass die Linux-Umgebung bestimmte Vorrausetzungen erfüllen sollte. Insbesondere konnten wir die Experimente nicht in einer Linux-Umgebung starten, die auf dem Windows-Subsystem basiert.
 
 \subsection{kWPO-JointHeur}
 Der Algorithmus kWPO-JointHeur versucht einer Anfrage mehrere Wegpunkte zuzuweisen, um damit die Auslastung zu verbessern. Daher suchen wir eine Topologie, die von mehreren Wegpunkten profitieren kann. Dazu modifizieren wir die Joint-Topologie, die bereits im ursprünglichen Paper verwendet wurde. Durch die Duplizierung eines Teilbereiches dieser Topologie, entsteht eine zweiter Bereich, welcher für Wegpunkte empfänglich wird[1].
@@ -289,8 +291,7 @@ Wie in den Abbildungen 9 und 10 erkennbar
 Offensichtlich führt die schon das entfernen eines Waypoints zu einer deutlichen Rechtsverschiebung im Plot und somit zu einer Verschlechterung der MLU auf über 2.0.
 
 \subsection{Nodes-kWP-JointHeur}
-
-Ausgehend von den Resultaten zur dritten Abwandlung aus Projekt 1 haben wir uns als Leitfrage gestellt: Welche Knoten sollen gesperrt werden?
+Der dritte Algorithmus, Nodes-kWP-JointHeur, basiert auch auf der Einschränkung der Wahl der Wegpunkte. Dabei liegt der Fokus nicht auf der Anzahl, sondern der Beschaffenheit der Wegpunkte. Im Rahmen der praktischen Umsetzung für unsere Mininet-Experimente werden wir hier in Anlehnung zum zweiten Algorithmus eine bestimmte Zahl an beliebigen Wegpunkten aus der bereits gegebenen Netzwerk-Instanz für die JointHeur entfernen. Im Gegensatz zum zweiten Algorithmus entfernen wir nun jedoch mehrere Wegpunkte, sodass eine noch schlechtere Auslastung zu erwarten ist.
 
 \begin{figure}[h]
   \centering
@@ -298,6 +299,9 @@ Ausgehend von den Resultaten zur dritten Abwandlung aus Projekt 1 haben wir uns 
   \caption{Resultat von kWPn-JointHeur}
 \end{figure}
 
+In Abbildung 18 sind die Ergebnisse der Mininet-Evaluation für dieses Szenario abgebildet. Es fällt auf, dass der dritte Algorithmus eine schlechtere Auslastung vorweist, als die reine Steuerung über die Gewichtung. Dies ist jedoch nicht plausibel, da der Joint-Algorithmus eine Kombination aus idealer Gewichtung und zusätzlichen Wegpunkten darstellt. Durch die Entfernung von Wegpunkten sollte der Algorithmus aber weiterhin besser als die reine Gewichtung sein.
+
+Die fehlerhaften Ergebnisse dürften auf die eingeschränkten Kapazitäten unseres Testrechners zurückzuführen sein.
 
 \section{Replikation der Ergebnisse einer anderen Gruppe}
 Zu Ende der Bearbeitungszeit fand jeweils ein sogenannter Code-Freeze statt, bei dem die teilnehmenden Gruppen ihre Arbeit untereinander bewerten und replizieren sollten. 
@@ -324,11 +328,16 @@ Bei der reinen Ausführung des Codes hatten wir keine Probleme. Allerdings waren
 \end{figure}
 
 \section{Zusammenfassung und Ausblick}
-Für Projekt 1 kann man am Ende festhalten, dass die Resultate unserer Algorithmen stark von der verwendeten Topologie abhängig waren. Zum Teil haben Topologien sogar gar nicht auf unsere Anpassungen der Algorithmen reagiert.
-Für die Zukunft wäre eine Betrachtung der Kombination unserer Ideen interessant. Die verschiedenen Ideen bringen für eine solche Kombination sowohl Vor- als auch Nachteile: \\
-So bringt die erste Idee den Vorteil, dass die Anzahl der verwendeten Waypoints nach oben hin abgesteckt wird. Andernfalls ist es allerdings auch schwer vorhersehbar, wie viele Iterationen die Greedy-WPO Komponente idealerweise laufen sollte. \\
-Der Sinn von Idee 2 für eine solche Kombination ist in Frage zu stellen: es bringt zwar eventuell Vorteile für die Anzahl der Iterationen, schneidet gegebenenfalls aber auch wichtige Waypoints ab und beeinflusst das Ergebnis eher negativ. Für eine Beschränkung $k$ der nutzbaren Waypoints war $MLU_{k}$ immer $\geq$ MLU. \\
-Der Vorteil von Idee 3 ist die Eliminierung von Priorisierung in der Generierung von W aypoints. Andernfalls sorgt Idee 3 für das Problem, dass vorher festgelegt werden muss, welche Kriterien man für die ideale Wahl für $K$ verwendet
+Im Rahmen von Projekt 1 haben wir uns mit der Wahl von Wegpunkten beim Routing in Netzwerkinstanzen beschäftigt. Anhand unserer Ergebnisse kann geschlossen werden, dass der Einfluss von Wegpunkten sehr von der Beschaffenheit der Topologie und der Verteilungen der Anfragen abhängt. So konnte unsere Algorithmen in manchen Konstellationen unsere Zielmaße stark verbessern oder verschlechtern, aber in anderen Konstellationen trotz der investierten Rechenzeit keine Reaktion stimulieren.
+
+Im zweiten Projekt konnten wir unsere Algorithmen in einer alternativen Umgebung testen. Hier konnten wir im Einklang mit unseren Erwartungen beim ersten Algorithmus eine optmierte und beim zweiten Algorithmus eine verschlechterte MLU feststellen. Die Ergebinisse zum dritten Algorithmus können wir jedoch aufgrund von mangelnder Plausibilität nicht berücksichtigen.
+
+Für die Zukunft wäre eine Betrachtung der Kombination unserer Ideen interessant. Die Schwächen einer Idee können durch die jeweils anderen Ideen kompensiert werden. Eine Kombination der Algorithmen mit ihren Vorteilen und Nachteilen könnte wie folgt aussehen:\\
+Die erste Idee bringt den Vorteil, dass die Anzahl der verwendeten Wegpunkte nach oben hin offen wird. Hier muss jedoch berücksichtigt werden, dass die Anzahl,k, der internen Iterationen keine Aussage über die Zahl der tatsächlich generierten Wegpunkte gibt.  Es ist also schwer vorhersehbar, wie viele Iterationen die Greedy-WPO Komponente idealerweise laufen sollte, um eine passende Zahl an Wegpunkten zu erhalten. \\
+Hier kann die zweite Idee herangezogen werden. Eine möglichst hohe Zahl an internen Iterationen bei Idee 1 kann mit einer eingeschränkten Zahl an Wegpunkten in Anlehnnung an Idee 2 terminiert werden.\\
+Im Rahmen dieser Kombination stellt sich die Frage: Die Zahl der Iterationen von GreedyWPO wird zwar flexibler, aber die zusätzliche Einschränkung kann möglicherweise wichtige Wegpunkte abschneiden und die die Zielfunktion negativ beeinflussen. Für eine Beschränkung $k$ der nutzbaren Waypoints war $MLU_{k}$ immer $\geq$ MLU. \\
+
+Schließlich kann die dritte Idee herangezogen werden, um der Generierung von Wegpunkten eine Priorisierung einzuprägen. Dadurch können potenziell gute Wegpunkte in der Generierung vorgezogen werden. Es muss jedoch berücksichtigt werden, dass die Kriterien für die Bestimmung der Priorisierung, definiert durch $K$, nicht eindeutig sind und situationsbedingt festgelegt werden müssen.
 
 \section{References}
 1. M.Parham, T.Fenz, N.Süss, K-T Förster, S.Schmid. 2021 \\
