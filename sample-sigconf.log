@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.27)  1 JUL 2022 20:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.11)  1 JUL 2022 22:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -916,30 +916,42 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 143.
+(Font)              scaled to size 17.28pt on input line 108.
 LaTeX Font Info:    Trying to load font information for T1+LinuxBiolinumT-TLF o
-n input line 143.
+n input line 108.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/libertine/T1LinuxBiolinumT-TLF.fd
 File: T1LinuxBiolinumT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Lin
 uxBiolinumT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 143.
+(Font)              scaled to size 17.28pt on input line 108.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxBiolinumT-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 143.
+(Font)              scaled to size 17.28pt on input line 108.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 143.
+(Font)              scaled to size 12.0pt on input line 108.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 143.
+(Font)              scaled to size 10.0pt on input line 108.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 108.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `LinuxLibertineT-TLF' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 143.
+(Font)              scaled to size 7.0pt on input line 108.
 LaTeX Font Info:    Trying to load font information for TS1+LinuxLibertineT-TLF
- on input line 143.
+ on input line 108.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.
 fd
@@ -947,289 +959,349 @@ File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 143.
+(Font)              scaled to size 7.0pt on input line 108.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 143.
+(Font)              scaled to size 9.0pt on input line 108.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 143.
-
-
-Package natbib Warning: Citation `originPaper' on page 1 undefined on input lin
-e 143.
-
+(Font)              scaled to size 10.95pt on input line 108.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 143.
+(Font)              scaled to size 8.0pt on input line 108.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 143.
+(Font)              scaled to size 8.0pt on input line 108.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 143.
+(Font)              scaled to size 8.0pt on input line 108.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 143.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `LinuxLibertineT-TLF' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
+(Font)              scaled to size 8.0pt on input line 108.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.2pt on input line 143.
-(/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-
-Package natbib Warning: Citation `originPaper' on page 1 undefined on input lin
-e 147.
-
+(Font)              scaled to size 6.2pt on input line 108.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 167.
-<abbildungen/kWPO_Concept.png, id=70, 672.5928pt x 372.4314pt>
+(Font)              scaled to size 9.0pt on input line 132.
+<abbildungen/kWPO_Concept.png, id=78, 672.5928pt x 372.4314pt>
 File: abbildungen/kWPO_Concept.png Graphic file (type png)
 <use abbildungen/kWPO_Concept.png>
-Package pdftex.def Info: abbildungen/kWPO_Concept.png  used on input line 170.
+Package pdftex.def Info: abbildungen/kWPO_Concept.png  used on input line 135.
 (pdftex.def)             Requested size: 241.14749pt x 133.52965pt.
-
-Overfull \hbox (2.8324pt too wide) in paragraph at lines 166--174
-\T1/LinuxLibertineT-TLF/m/n/9 (-20) max-i-mal einem Weg-punkt pro De-mand vor. 
-Um diese Ein-schränkung
- []
-
-<abbildungen/pseudo1.png, id=71, 280.04625pt x 247.92625pt>
+<abbildungen/pseudo1.png, id=79, 280.04625pt x 247.92625pt>
 File: abbildungen/pseudo1.png Graphic file (type png)
 <use abbildungen/pseudo1.png>
-Package pdftex.def Info: abbildungen/pseudo1.png  used on input line 177.
+Package pdftex.def Info: abbildungen/pseudo1.png  used on input line 142.
 (pdftex.def)             Requested size: 241.14749pt x 213.49614pt.
 
-Class acmart Warning: A possible image without description on input line 179.
+
+Class acmart Warning: A possible image without description on input line 144.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 182.
+(Font)              scaled to size 6.0pt on input line 147.
 [1.1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
  <./abbildungen/kWPO_Concept.png>]
-<abbildungen/kWPO_Capacity.png, id=95, 457.2282pt x 340.6326pt>
+<abbildungen/kWPO_Capacity.png, id=103, 457.2282pt x 340.6326pt>
 File: abbildungen/kWPO_Capacity.png Graphic file (type png)
 <use abbildungen/kWPO_Capacity.png>
-Package pdftex.def Info: abbildungen/kWPO_Capacity.png  used on input line 186.
+Package pdftex.def Info: abbildungen/kWPO_Capacity.png  used on input line 151.
 
 (pdftex.def)             Requested size: 241.14749pt x 179.656pt.
-<abbildungen/PNG-Bild.png, id=96, 524.96124pt x 392.96812pt>
-File: abbildungen/PNG-Bild.png Graphic file (type png)
-<use abbildungen/PNG-Bild.png>
-Package pdftex.def Info: abbildungen/PNG-Bild.png  used on input line 193.
-(pdftex.def)             Requested size: 241.14749pt x 180.51567pt.
+
+
+Class acmart Warning: A possible image without description on input line 153.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<abbildungen/PNG-Bild 2.png, id=97, 559.59062pt x 414.04688pt>
+<abbildungen/PNG-Bild.png, id=104, 524.96124pt x 392.96812pt>
+File: abbildungen/PNG-Bild.png Graphic file (type png)
+<use abbildungen/PNG-Bild.png>
+Package pdftex.def Info: abbildungen/PNG-Bild.png  used on input line 157.
+(pdftex.def)             Requested size: 241.14749pt x 180.51567pt.
+
+Class acmart Warning: A possible image without description on input line 159.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<abbildungen/PNG-Bild 2.png, id=105, 559.59062pt x 414.04688pt>
 File: abbildungen/PNG-Bild 2.png Graphic file (type png)
 <use abbildungen/PNG-Bild 2.png>
-Package pdftex.def Info: abbildungen/PNG-Bild 2.png  used on input line 200.
+Package pdftex.def Info: abbildungen/PNG-Bild 2.png  used on input line 163.
 (pdftex.def)             Requested size: 241.14749pt x 178.42838pt.
-<abbildungen/PNG-Bild 3.png, id=98, 1158.3275pt x 387.94937pt>
+<abbildungen/PNG-Bild 3.png, id=106, 1158.3275pt x 387.94937pt>
 File: abbildungen/PNG-Bild 3.png Graphic file (type png)
 <use abbildungen/PNG-Bild 3.png>
-Package pdftex.def Info: abbildungen/PNG-Bild 3.png  used on input line 207.
+Package pdftex.def Info: abbildungen/PNG-Bild 3.png  used on input line 170.
 (pdftex.def)             Requested size: 241.14749pt x 80.76141pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<abbildungen/pseudo2.png, id=99, 265.99374pt x 256.96pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<abbildungen/pseudo2.png, id=107, 265.99374pt x 256.96pt>
 File: abbildungen/pseudo2.png Graphic file (type png)
 <use abbildungen/pseudo2.png>
-Package pdftex.def Info: abbildungen/pseudo2.png  used on input line 227.
+Package pdftex.def Info: abbildungen/pseudo2.png  used on input line 190.
 (pdftex.def)             Requested size: 241.14749pt x 232.96352pt.
 
-Class acmart Warning: A possible image without description on input line 229.
+Class acmart Warning: A possible image without description on input line 192.
 
-<abbildungen/syntDemtopokwp.png, id=100, 512.91624pt x 383.4325pt>
+<abbildungen/syntDemtopokwp.png, id=108, 512.91624pt x 383.4325pt>
 File: abbildungen/syntDemtopokwp.png Graphic file (type png)
 <use abbildungen/syntDemtopokwp.png>
-Package pdftex.def Info: abbildungen/syntDemtopokwp.png  used on input line 233
+Package pdftex.def Info: abbildungen/syntDemtopokwp.png  used on input line 196
 .
 (pdftex.def)             Requested size: 241.14749pt x 180.2718pt.
 
-Class acmart Warning: A possible image without description on input line 235.
+Class acmart Warning: A possible image without description on input line 198.
 
-<abbildungen/realDemtopokwp.png, id=101, 375.4025pt x 283.0575pt>
+<abbildungen/realDemtopokwp.png, id=109, 375.4025pt x 283.0575pt>
 File: abbildungen/realDemtopokwp.png Graphic file (type png)
 <use abbildungen/realDemtopokwp.png>
-Package pdftex.def Info: abbildungen/realDemtopokwp.png  used on input line 243
+Package pdftex.def Info: abbildungen/realDemtopokwp.png  used on input line 206
 .
 (pdftex.def)             Requested size: 241.14749pt x 181.82994pt.
 
-Class acmart Warning: A possible image without description on input line 245.
+Class acmart Warning: A possible image without description on input line 208.
 
-<abbildungen/allTopologieskwp.png, id=102, 807.015pt x 283.0575pt>
+<abbildungen/allTopologieskwp.png, id=110, 807.015pt x 283.0575pt>
 File: abbildungen/allTopologieskwp.png Graphic file (type png)
 <use abbildungen/allTopologieskwp.png>
 Package pdftex.def Info: abbildungen/allTopologieskwp.png  used on input line 2
-53.
+16.
 (pdftex.def)             Requested size: 241.14749pt x 84.58101pt.
 
-Class acmart Warning: A possible image without description on input line 255.
+Class acmart Warning: A possible image without description on input line 218.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--256
+Underfull \hbox (badness 10000) in paragraph at lines 178--219
 
  []
 
 
-Overfull \hbox (2.8031pt too wide) in paragraph at lines 215--256
+Overfull \hbox (2.8031pt too wide) in paragraph at lines 178--219
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) würde k ver-ringert, bis k am Ende 0 be-trä
 gt. Somit kann sichergestellt
  []
 
 
-Overfull \hbox (7.47842pt too wide) in paragraph at lines 215--256
+Overfull \hbox (7.47842pt too wide) in paragraph at lines 178--219
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) auf die MLU-Performance von JointHeur sehr 
 gut. Um her-auszufinden,
  []
 
+
+Underfull \vbox (badness 4096) has occurred while \output is active []
+
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 256.
+(Font)              scaled to size 9.0pt on input line 219.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 256.
-[2.2 <./abbildungen/pseudo1.png> <./abbildungen/kWPO_Capacity.png> <./abbildung
-en/PNG-Bild.png> <./abbildungen/PNG-Bild 2.png>]
+(Font)              scaled to size 7.0pt on input line 219.
+ [2.2 <./abbildungen/pseudo1.png> <./abbildungen/kWPO_Capacity.png> <./abbildun
+gen/PNG-Bild.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3.3 <./abbildungen/PNG-Bild 3.png> <./abbildungen/pseudo2.png> <./abbildungen/
-syntDemtopokwp.png> <./abbildungen/realDemtopokwp.png>]
-Overfull \hbox (25.86923pt too wide) in paragraph at lines 258--263
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (25.86923pt too wide) in paragraph at lines 221--226
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) In un-serer drit-ten Ab-wand-lung be-tra-ch
 ten wir eben-falls eine Beschränkung
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--263
+Underfull \hbox (badness 10000) in paragraph at lines 221--226
 
  []
 
-<abbildungen/pseudo3.png, id=130, 281.05pt x 256.96pt>
+
+Underfull \vbox (badness 1057) has occurred while \output is active []
+
+ [3.3 <./abbildungen/PNG-Bild 2.png> <./abbildungen/PNG-Bild 3.png> <./abbildun
+gen/pseudo2.png> <./abbildungen/syntDemtopokwp.png>]
+<abbildungen/pseudo3.png, id=136, 281.05pt x 240.9pt>
 File: abbildungen/pseudo3.png Graphic file (type png)
 <use abbildungen/pseudo3.png>
-Package pdftex.def Info: abbildungen/pseudo3.png  used on input line 267.
-(pdftex.def)             Requested size: 241.14749pt x 220.47942pt.
+Package pdftex.def Info: abbildungen/pseudo3.png  used on input line 230.
+(pdftex.def)             Requested size: 241.14749pt x 206.69943pt.
 
-Class acmart Warning: A possible image without description on input line 269.
+
+Class acmart Warning: A possible image without description on input line 232.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<abbildungen/a31.png, id=131, 869.74937pt x 649.92813pt>
+<abbildungen/a31.png, id=137, 869.74937pt x 649.92813pt>
 File: abbildungen/a31.png Graphic file (type png)
 <use abbildungen/a31.png>
-Package pdftex.def Info: abbildungen/a31.png  used on input line 273.
+Package pdftex.def Info: abbildungen/a31.png  used on input line 236.
 (pdftex.def)             Requested size: 241.14749pt x 180.19356pt.
 
-Class acmart Warning: A possible image without description on input line 275.
+Class acmart Warning: A possible image without description on input line 238.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<abbildungen/a32.png, id=132, 886.81313pt x 649.42625pt>
+<abbildungen/a32.png, id=138, 886.81313pt x 649.42625pt>
 File: abbildungen/a32.png Graphic file (type png)
 <use abbildungen/a32.png>
-Package pdftex.def Info: abbildungen/a32.png  used on input line 280.
+Package pdftex.def Info: abbildungen/a32.png  used on input line 243.
 (pdftex.def)             Requested size: 241.14749pt x 176.59601pt.
 
-Class acmart Warning: A possible image without description on input line 282.
+Class acmart Warning: A possible image without description on input line 245.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<abbildungen/a33.png, id=133, 1140.26pt x 396.48125pt>
+<abbildungen/a33.png, id=139, 1140.26pt x 396.48125pt>
 File: abbildungen/a33.png Graphic file (type png)
 <use abbildungen/a33.png>
-Package pdftex.def Info: abbildungen/a33.png  used on input line 288.
+Package pdftex.def Info: abbildungen/a33.png  used on input line 251.
 (pdftex.def)             Requested size: 241.14749pt x 83.8443pt.
 
-Class acmart Warning: A possible image without description on input line 290.
+Class acmart Warning: A possible image without description on input line 253.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4.4 <./abbildungen/allTopologieskwp.png> <./abbildungen/pseudo3.png> <./abbild
-ungen/a31.png>]
-<abbildungen/kWPO_topo.png, id=144, 785.334pt x 323.2878pt>
+
+Underfull \vbox (badness 3568) has occurred while \output is active []
+
+ [4.4 <./abbildungen/realDemtopokwp.png> <./abbildungen/allTopologieskwp.png> <
+./abbildungen/pseudo3.png> <./abbildungen/a31.png>]
+<abbildungen/kWPO_topo.png, id=152, 785.334pt x 323.2878pt>
 File: abbildungen/kWPO_topo.png Graphic file (type png)
 <use abbildungen/kWPO_topo.png>
-Package pdftex.def Info: abbildungen/kWPO_topo.png  used on input line 305.
+Package pdftex.def Info: abbildungen/kWPO_topo.png  used on input line 268.
 (pdftex.def)             Requested size: 241.14749pt x 99.26611pt.
 
 
-Class acmart Warning: A possible image without description on input line 307.
+Class acmart Warning: A possible image without description on input line 270.
 
-<abbildungen/kWPOJoint_Plot.png, id=145, 700.2963pt x 266.6763pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<abbildungen/kWPOJoint_Plot.png, id=153, 700.2963pt x 266.6763pt>
 File: abbildungen/kWPOJoint_Plot.png Graphic file (type png)
 <use abbildungen/kWPOJoint_Plot.png>
-Package pdftex.def Info: abbildungen/kWPOJoint_Plot.png  used on input line 311
+Package pdftex.def Info: abbildungen/kWPOJoint_Plot.png  used on input line 274
 .
 (pdftex.def)             Requested size: 241.14749pt x 91.82845pt.
 
-Class acmart Warning: A possible image without description on input line 313.
+Class acmart Warning: A possible image without description on input line 276.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (23.31085pt too wide) in paragraph at lines 317--319
+Overfull \hbox (23.31085pt too wide) in paragraph at lines 280--282
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) wer-den. Zur Erin-nerung: bei der zweiten I
 dee geht es um die Beschränkung
  []
 
-<abbildungen/22.png, id=146, 1117.17375pt x 411.5375pt>
+<abbildungen/22.png, id=154, 1117.17375pt x 411.5375pt>
 File: abbildungen/22.png Graphic file (type png)
 <use abbildungen/22.png>
-Package pdftex.def Info: abbildungen/22.png  used on input line 322.
+Package pdftex.def Info: abbildungen/22.png  used on input line 285.
 (pdftex.def)             Requested size: 241.14749pt x 88.83049pt.
 
-Class acmart Warning: A possible image without description on input line 324.
+Class acmart Warning: A possible image without description on input line 287.
 
-<abbildungen/kWPnJoint.png, id=147, 705.63625pt x 270.00874pt>
+<abbildungen/kWPnJoint.png, id=155, 705.63625pt x 270.00874pt>
 File: abbildungen/kWPnJoint.png Graphic file (type png)
 <use abbildungen/kWPnJoint.png>
-Package pdftex.def Info: abbildungen/kWPnJoint.png  used on input line 334.
+Package pdftex.def Info: abbildungen/kWPnJoint.png  used on input line 297.
 (pdftex.def)             Requested size: 241.14749pt x 92.27142pt.
 
-Class acmart Warning: A possible image without description on input line 336.
+Class acmart Warning: A possible image without description on input line 299.
+
+[5.5 <./abbildungen/a32.png> <./abbildungen/a33.png> <./abbildungen/kWPO_topo.p
+ng> <./abbildungen/kWPOJoint_Plot.png> <./abbildungen/22.png>]
+<abbildungen/replik1.png, id=170, 528.97626pt x 377.41pt>
+File: abbildungen/replik1.png Graphic file (type png)
+<use abbildungen/replik1.png>
+Package pdftex.def Info: abbildungen/replik1.png  used on input line 313.
+(pdftex.def)             Requested size: 241.14749pt x 172.05006pt.
+
+
+Class acmart Warning: A possible image without description on input line 315.
+
+
+Overfull \hbox (7.07591pt too wide) in paragraph at lines 305--316
+\T1/LinuxLibertineT-TLF/m/n/9 (-20) wer-den. So dauerte die Aus-führung des Ex-
+per-i-ments, welches mehrere
+ []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<abbildungen/replik1.png, id=148, 528.97626pt x 377.41pt>
-File: abbildungen/replik1.png Graphic file (type png)
-<use abbildungen/replik1.png>
-Package pdftex.def Info: abbildungen/replik1.png  used on input line 351.
-(pdftex.def)             Requested size: 241.14749pt x 172.05006pt.
-
-Class acmart Warning: A possible image without description on input line 353.
-
-[5.5 <./abbildungen/a32.png> <./abbildungen/a33.png> <./abbildungen/kWPO_topo.p
-ng> <./abbildungen/kWPOJoint_Plot.png> <./abbildungen/22.png>]
-<abbildungen/boxplot.png, id=163, 638.1441pt x 306.4248pt>
+<abbildungen/boxplot.png, id=171, 638.1441pt x 306.4248pt>
 File: abbildungen/boxplot.png Graphic file (type png)
 <use abbildungen/boxplot.png>
-Package pdftex.def Info: abbildungen/boxplot.png  used on input line 360.
+Package pdftex.def Info: abbildungen/boxplot.png  used on input line 322.
 (pdftex.def)             Requested size: 241.14749pt x 115.79271pt.
 
+Class acmart Warning: A possible image without description on input line 324.
 
-Class acmart Warning: A possible image without description on input line 362.
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--359
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--359
+
+ []
+
+
+Overfull \hbox (9.34262pt too wide) in paragraph at lines 334--359
+\T1/LinuxLibertineT-TLF/m/n/9 (-20) Simulationsframework zur Durch-führung der 
+Ex-per-i-mente in Nanonet 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--359
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--359
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--359
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--359
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--359
+
+ []
+
+[6.6 <./abbildungen/kWPnJoint.png> <./abbildungen/replik1.png> <./abbildungen/b
+oxplot.png>]
 No file sample-sigconf.bbl.
-
-Package natbib Warning: There were undefined citations.
-
 (/usr/local/texlive/2022/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 )
@@ -1242,52 +1314,40 @@ Class acmart Warning: Some images may lack descriptions.
 
 Class acmart Warning: CCS concepts are mandatory for papers over two pages.
 
-
-Package balance Warning: You have called \balance in second column
-(balance)                Columns might not be balanced.
-
-[6.6 <./abbildungen/kWPnJoint.png> <./abbildungen/replik1.png> <./abbildungen/b
-oxplot.png>] (./sample-sigconf.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+[7.7] (./sample-sigconf.aux)
 Package rerunfilecheck Info: File `sample-sigconf.out' has not changed.
-(rerunfilecheck)             Checksum: 549531BA4BAD619DCB32C140607EB7D7;2827.
+(rerunfilecheck)             Checksum: 70DD2028B7807D16CE277A8E370FCB2E;3137.
  ) 
 Here is how much of TeX's memory you used:
- 20963 strings out of 478268
- 343606 string characters out of 5846347
- 703982 words of memory out of 5000000
- 38238 multiletter control sequences out of 15000+600000
- 608641 words of font info for 302 fonts, out of 8000000 for 9000
+ 21007 strings out of 478268
+ 344558 string characters out of 5846347
+ 713320 words of memory out of 5000000
+ 38260 multiletter control sequences out of 15000+600000
+ 615296 words of font info for 323 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 84i,16n,131p,1011b,594s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{page.7} has been referenced but does not exist, rep
-laced by a fixed one
-
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{
-/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}{/
-usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{/u
-sr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/us
-r/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/usr
-/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}</usr/
-local/texlive/2022/texmf-dist/fonts/type1/public/newtx/LibertineMathMI.pfb></us
-r/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/LibertineMathMI5.pfb><
-/usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/LibertineMathMI7.pf
-b></usr/local/texlive/2022/texmf-dist/fonts/type1/public/libertine/LinBiolinumT
-.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/libertine/LinBiolin
-umTB.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/libertine/LinLi
-bertineT.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/libertine/L
-inLibertineTB.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/libert
-ine/LinLibertineTI.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/n
-ewtx/NewTXMI.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/t
-xexs.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/txmiaX.pf
-b></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on sample-sigconf.pdf (6 pages, 2866895 bytes).
+ 84i,16n,131p,1011b,561s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
+}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{
+/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/
+usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/u
+sr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}</us
+r/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/LibertineMathMI.pfb></
+usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/LibertineMathMI5.pfb
+></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/LibertineMathMI7.
+pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/libertine/LinBiolinu
+mT.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/libertine/LinBiol
+inumTB.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/libertine/Lin
+LibertineT.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/libertine
+/LinLibertineTB.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/libe
+rtine/LinLibertineTI.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public
+/newtx/NewTXMI.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx
+/txexs.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/txmiaX.
+pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
+Output written on sample-sigconf.pdf (7 pages, 2874857 bytes).
 PDF statistics:
- 249 PDF objects out of 1000 (max. 8388607)
- 169 compressed objects within 2 object streams
- 45 named destinations out of 1000 (max. 500000)
- 76013 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 268 PDF objects out of 1000 (max. 8388607)
+ 187 compressed objects within 2 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 80125 words of extra memory for PDF output out of 89155 (max. 10000000)
 
