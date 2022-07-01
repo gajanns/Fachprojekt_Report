@@ -6,53 +6,6 @@
   \providecommand\BibTeX{{%
     Bib\TeX}}}
 
-%% Rights management information.  This information is sent to you
-%% when you complete the rights form.  These commands have SAMPLE
-%% values in them; it is your responsibility as an author to replace
-%% the commands and values with those provided to you when you
-%% complete the rights form.
-%%\setcopyright{acmcopyright}
-%%\copyrightyear{2018}
-%%\acmYear{2018}
-%%\acmDOI{XXXXXXX.XXXXXXX}
-
-%% These commands are for a PROCEEDINGS abstract or paper.
-
-
-%%
-%% Submission ID.
-%% Use this when submitting an article to a sponsored event. You'll
-%% receive a unique submission ID from the organizers
-%% of the event, and this ID should be used as the parameter to this command.
-%%\acmSubmissionID{123-A56-BU3}
-
-%%
-%% For managing citations, it is recommended to use bibliography
-%% files in BibTeX format.
-%%
-%% You can then either use BibTeX with the ACM-Reference-Format style,
-%% or BibLaTeX with the acmnumeric or acmauthoryear sytles, that include
-%% support for advanced citation of software artefact from the
-%% biblatex-software package, also separately available on CTAN.
-%%
-%% Look at the sample-*-biblatex.tex files for templates showcasing
-%% the biblatex styles.
-%%
-
-%%
-%% The majority of ACM publications use numbered citations and
-%% references.  The command \citestyle{authoryear} switches to the
-%% "author year" style.
-%%
-%% If you are preparing content for an event
-%% sponsored by ACM SIGGRAPH, you must use the "author year" style of
-%% citations and references.
-%% Uncommenting
-%% the next command will enable that style.
-%%\citestyle{acmauthoryear}
-
-
-
 %%
 %% end of the preamble, start of the body of the document source.
 \begin{document}
@@ -62,12 +15,7 @@
 %% allowing the author to define a "short title" to be used in page headers.
 \title{Fachprojekt Routingalgorithmen SS2022 - Projektbericht}
 
-%%
-%% The "author" command and its associated commands are used to define
-%% the authors and their affiliations.
-%% Of note is the shared affiliation of the first two authors, and the
-%% "authornote" and "authornotemark" commands
-%% used to denote shared contribution to the research.
+
 
 \author{Gajann Sivarajah}
 \author{Jan Schulte}
@@ -128,7 +76,7 @@ zu dem oben genannten Paper [1] zugehörig ist.
 
 \subsection{kWPO-JointHeur}
 Die im Paper [1] beschriebene JointHeur-Routine sieht die Wahl von maximal einem Wegpunkt pro Anfrage vor. Um diese Einschränkung zu umgehen, definieren wir eine modifizierte Routine mit dem Namen kWPO-JointHeur. Im Gegensatz zur JointHeur soll hier die Routine zur Generierung von Wegpunkten, GreedyWPO, mehrfach wiederholt werden. Dabei soll in jeder Iteration die durch Wegpunkte modifizierte Anfrageliste der letzten Iteration als Eingabe eingespeist werden. 
-Die Anzahl der Iterationen soll dabei durch einen Parameter $k$ angegeben werden können. Für $k = 0$ würde die Ausführung des Algorithmus derer von HeurOSPF, welche eine Gewichtung der Links vornimmt, entsprechen. Der normale JointHeur-Algorithmus aus dem Paper entspricht der Ausführung mit $k=1$. Für Werte $k > 1$ erzeugt die $k$-fache Anwendung maximal $2^{k}-1$ Wegpunkte pro Anfrage[1].
+Die Anzahl der Iterationen soll dabei durch einen Parameter $k$ angegeben werden können. Für $k = 0$ würde die Ausführung des Algorithmus derer von HeurOSPF, welche eine Gewichtung der Links vornimmt, entsprechen. Der normale JointHeur-Algorithmus aus dem Paper entspricht der Ausführung mit $k=1$. Für Werte $k > 1$ erzeugt die $k$-fache Anwendung maximal $2^{k}-1$ Wegpunkte pro Anfrage[1]. \\
 \begin{figure}[h]
   \centering 
   \includegraphics[width=\linewidth]{abbildungen/kWPO_Concept.png}
@@ -141,10 +89,11 @@ Die Anzahl der Iterationen soll dabei durch einen Parameter $k$ angegeben werden
   \includegraphics[width=\linewidth]{abbildungen/pseudo1}
   \caption{Pseudocode zu kWPo-JointHeur}
 \end{figure}
+
 Zur weiteren Optimierung von kWPO-JointHeur betrachten wir die GreedyWPO-Komponente genauer. In dieser Routine werden die Anfragen zunächst nach ihrem Volumen sortiert und dann in dieser Reihenfolge hinsichtlich der Wegpunkte bearbeitet. Es fällt auf, dass die Reihenfolge einen Einfluss auf die Performance haben muss, da bereits gesetzte Wegpunkte nicht gelöscht werden und unbearbeitete Anfragen nicht berücksichtigt werden. Jedoch berücksichtigt das verwendete Sortierkriterium nicht die zugrunde liegende Topologie.
 Neben dem Anfragevolumen führen wir das zusätzliche Sortierkriterium der Knotenkapazität ein. Die Knotenkapazität eines Knoten sei durch die Summe der verbundenen Kantenkapazitäten gegeben.
 Wie definieren die Knotenkapazität $C_v$ wie folgt: \begin{center} $c_v = \sum_{e_{v_{i}} \in E} c(e_{v_i})$\end{center}
-Im Rahmen von kWPO-JointHeur, sollen die Anfragen nun nach der Summe der Quellen- und Senkenknotenkapazität absteigend sortiert werden. Die Begründung liegt in der Tatsache, dass Knotenpaare mit hoher Kapazität durch alternative Wege hoher Kapazität entsprechend die MLU stärker senken können[1].
+Im Rahmen von kWPO-JointHeur, sollen die Anfragen nun nach der Summe der Quellen- und Senkenknotenkapazität absteigend sortiert werden. Die Begründung liegt in der Tatsache, dass Knotenpaare mit hoher Kapazität durch alternative Wege hoher Kapazität entsprechend die MLU stärker senken können[1]. \\
 \begin{figure}[h]
   \centering 
   \includegraphics[width=\linewidth]{abbildungen/kWPO_Capacity.png}
@@ -182,7 +131,7 @@ Daher steht bei dieser Abwandlung eher im Vordergrund, für welche Beschränkung
 Die praktische Abwandlung im Code ist simpel - Es muss lediglich ein Parameter $k$ in die 
 GreedyWPO-Komponente des JointHeur-Algorithmus eingepflegt werden. $k$ fungiert dann als ein runter zählender Counter. Sollte GreedyWPO
 einen Waypoint wählen, so würde k verringert, bis k am Ende 0 beträgt. Somit kann sichergestellt werden, dass nur die
-erlaubte Anzahl an Wegpunkten erzeugt wird[1,2].
+erlaubte Anzahl an Wegpunkten erzeugt wird[1,2]. \\
 \\
 \begin{figure}[h]
   \centering
@@ -320,7 +269,7 @@ welches die tatsächliche Ausführungszeit der Algorithmen darstellt. Allerdings
 
 \subsection{Code-Freeze - Projekt 2}
 Auch das zweite Projekt der anderen Gruppe basierte auf den Grundideen von Projekt 1 und wurde in Form von Experimenten mit Nanonet durchgeführt. Auch hier ist wieder positiv anzumerken, dass der Code wieder zusätzlich zum bestehenden Weg auch über ein vorbereitetes VM-Image direkt ausgeführt werden kann. Die zur Ausführung nötigen Schritte sind zudem nochmal beschrieben. \\
-Bei der reinen Ausführung des Codes hatten wir keine Probleme. Allerdings waren nachträglich einige Modifikationen an der Datei nötig, welche zum Plotten der Ergebnisse benötigt wird [6]. Nach den Modifikationen haben wir folgenden Boxplot erhalten:
+Bei der reinen Ausführung des Codes hatten wir keine Probleme. Allerdings waren nachträglich einige Modifikationen an der Datei nötig, welche zum Plotten der Ergebnisse benötigt wird [6]. Nach den Modifikationen haben wir folgenden Boxplot erhalten: 
 \begin{figure}[h]
   \centering
   \includegraphics[width=\linewidth]{abbildungen/boxplot}
@@ -335,6 +284,7 @@ Im zweiten Projekt konnten wir unsere Algorithmen in einer alternativen Umgebung
 Für die Zukunft wäre eine Betrachtung der Kombination unserer Ideen interessant. Die Schwächen einer Idee können durch die jeweils anderen Ideen kompensiert werden. Eine Kombination der Algorithmen mit ihren Vorteilen und Nachteilen könnte wie folgt aussehen:\\
 Die erste Idee bringt den Vorteil, dass die Anzahl der verwendeten Wegpunkte nach oben hin offen wird. Hier muss jedoch berücksichtigt werden, dass die Anzahl,k, der internen Iterationen keine Aussage über die Zahl der tatsächlich generierten Wegpunkte gibt.  Es ist also schwer vorhersehbar, wie viele Iterationen die Greedy-WPO Komponente idealerweise laufen sollte, um eine passende Zahl an Wegpunkten zu erhalten. \\
 Hier kann die zweite Idee herangezogen werden. Eine möglichst hohe Zahl an internen Iterationen bei Idee 1 kann mit einer eingeschränkten Zahl an Wegpunkten in Anlehnnung an Idee 2 terminiert werden.\\
+\\
 Im Rahmen dieser Kombination stellt sich die Frage: Die Zahl der Iterationen von GreedyWPO wird zwar flexibler, aber die zusätzliche Einschränkung kann möglicherweise wichtige Wegpunkte abschneiden und die die Zielfunktion negativ beeinflussen. Für eine Beschränkung $k$ der nutzbaren Waypoints war $MLU_{k}$ immer $\geq$ MLU. \\
 
 Schließlich kann die dritte Idee herangezogen werden, um der Generierung von Wegpunkten eine Priorisierung einzuprägen. Dadurch können potenziell gute Wegpunkte in der Generierung vorgezogen werden. Es muss jedoch berücksichtigt werden, dass die Kriterien für die Bestimmung der Priorisierung, definiert durch $K$, nicht eindeutig sind und situationsbedingt festgelegt werden müssen.
