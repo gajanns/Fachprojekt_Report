@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.11)  1 JUL 2022 23:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.11)  1 JUL 2022 23:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1158,17 +1158,19 @@ Class acmart Warning: A possible image without description on input line 193.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<abbildungen/a33.png, id=143, 1140.26pt x 396.48125pt>
+[4.4 <./abbildungen/realDemtopokwp.png> <./abbildungen/allTopologieskwp.png> <.
+/abbildungen/pseudo3.png> <./abbildungen/a31.png>]
+<abbildungen/a33.png, id=155, 1140.26pt x 396.48125pt>
 File: abbildungen/a33.png Graphic file (type png)
 <use abbildungen/a33.png>
 Package pdftex.def Info: abbildungen/a33.png  used on input line 199.
 (pdftex.def)             Requested size: 241.14749pt x 83.8443pt.
 
+
 Class acmart Warning: A possible image without description on input line 201.
 
-[4.4 <./abbildungen/realDemtopokwp.png> <./abbildungen/allTopologieskwp.png> <.
-/abbildungen/pseudo3.png> <./abbildungen/a31.png>]
-Overfull \hbox (1.77184pt too wide) in paragraph at lines 213--214
+
+Overfull \hbox (1.77184pt too wide) in paragraph at lines 212--213
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) Um die beschriebe-nen Ex-per-i-mente durchz
 uführen, musste zunächst
  []
@@ -1176,40 +1178,39 @@ uführen, musste zunächst
 <abbildungen/kWPO_topo.png, id=156, 785.334pt x 323.2878pt>
 File: abbildungen/kWPO_topo.png Graphic file (type png)
 <use abbildungen/kWPO_topo.png>
-Package pdftex.def Info: abbildungen/kWPO_topo.png  used on input line 219.
+Package pdftex.def Info: abbildungen/kWPO_topo.png  used on input line 218.
 (pdftex.def)             Requested size: 241.14749pt x 99.26611pt.
 
-Class acmart Warning: A possible image without description on input line 221.
+Class acmart Warning: A possible image without description on input line 220.
 
 <abbildungen/kWPOJoint_Plot.png, id=157, 700.2963pt x 266.6763pt>
 File: abbildungen/kWPOJoint_Plot.png Graphic file (type png)
 <use abbildungen/kWPOJoint_Plot.png>
-Package pdftex.def Info: abbildungen/kWPOJoint_Plot.png  used on input line 225
+Package pdftex.def Info: abbildungen/kWPOJoint_Plot.png  used on input line 224
 .
 (pdftex.def)             Requested size: 241.14749pt x 91.82845pt.
 
-Class acmart Warning: A possible image without description on input line 227.
+Class acmart Warning: A possible image without description on input line 226.
 
 
-Overfull \hbox (23.31085pt too wide) in paragraph at lines 231--233
+Overfull \hbox (23.31085pt too wide) in paragraph at lines 230--232
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) wer-den. Zur Erin-nerung: bei der zweiten I
 dee geht es um die Beschränkung
  []
 
-<abbildungen/22.png, id=158, 1117.17375pt x 411.5375pt>
-File: abbildungen/22.png Graphic file (type png)
-<use abbildungen/22.png>
-Package pdftex.def Info: abbildungen/22.png  used on input line 236.
-(pdftex.def)             Requested size: 241.14749pt x 88.83049pt.
-
-Class acmart Warning: A possible image without description on input line 238.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 [5.5 <./abbildungen/a32.png> <./abbildungen/a33.png> <./abbildungen/kWPO_topo.p
 ng> <./abbildungen/kWPOJoint_Plot.png>]
-Overfull \hbox (4.08858pt too wide) in paragraph at lines 243--244
+<abbildungen/22.png, id=170, 1117.17375pt x 411.5375pt>
+File: abbildungen/22.png Graphic file (type png)
+<use abbildungen/22.png>
+Package pdftex.def Info: abbildungen/22.png  used on input line 235.
+(pdftex.def)             Requested size: 241.14749pt x 88.83049pt.
+
+
+Class acmart Warning: A possible image without description on input line 237.
+
+
+Overfull \hbox (4.08858pt too wide) in paragraph at lines 242--243
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) Rah-men der prak-tis-chen Um-set-zung für u
 n-sere Mininet-Experimente
  []
@@ -1217,21 +1218,21 @@ n-sere Mininet-Experimente
 <abbildungen/kWPnJoint.png, id=171, 705.63625pt x 270.00874pt>
 File: abbildungen/kWPnJoint.png Graphic file (type png)
 <use abbildungen/kWPnJoint.png>
-Package pdftex.def Info: abbildungen/kWPnJoint.png  used on input line 247.
+Package pdftex.def Info: abbildungen/kWPnJoint.png  used on input line 246.
 (pdftex.def)             Requested size: 241.14749pt x 92.27142pt.
 
-Class acmart Warning: A possible image without description on input line 249.
+Class acmart Warning: A possible image without description on input line 248.
 
 <abbildungen/replik1.png, id=172, 528.97626pt x 377.41pt>
 File: abbildungen/replik1.png Graphic file (type png)
 <use abbildungen/replik1.png>
-Package pdftex.def Info: abbildungen/replik1.png  used on input line 266.
+Package pdftex.def Info: abbildungen/replik1.png  used on input line 265.
 (pdftex.def)             Requested size: 241.14749pt x 172.05006pt.
 
-Class acmart Warning: A possible image without description on input line 268.
+Class acmart Warning: A possible image without description on input line 267.
 
 
-Overfull \hbox (7.07591pt too wide) in paragraph at lines 258--269
+Overfull \hbox (7.07591pt too wide) in paragraph at lines 257--268
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) wer-den. So dauerte die Aus-führung des Ex-
 per-i-ments, welches mehrere
  []
@@ -1239,81 +1240,74 @@ per-i-ments, welches mehrere
 <abbildungen/boxplot.png, id=173, 638.1441pt x 306.4248pt>
 File: abbildungen/boxplot.png Graphic file (type png)
 <use abbildungen/boxplot.png>
-Package pdftex.def Info: abbildungen/boxplot.png  used on input line 275.
+Package pdftex.def Info: abbildungen/boxplot.png  used on input line 274.
 (pdftex.def)             Requested size: 241.14749pt x 115.79271pt.
 
-Class acmart Warning: A possible image without description on input line 277.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+Class acmart Warning: A possible image without description on input line 276.
 
 [6.6 <./abbildungen/22.png> <./abbildungen/kWPnJoint.png> <./abbildungen/replik
 1.png>]
-Overfull \hbox (16.93428pt too wide) in paragraph at lines 284--289
+Overfull \hbox (16.93428pt too wide) in paragraph at lines 283--288
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) hohe Zahl an in-ter-nen It-er-a-tio-nen bei
  Idee 1 kann mit einer eingeschränk-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--289
+Underfull \hbox (badness 10000) in paragraph at lines 283--288
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--289
+Underfull \hbox (badness 10000) in paragraph at lines 283--288
 
  []
 
 
-Overfull \hbox (13.09006pt too wide) in paragraph at lines 290--291
+Overfull \hbox (13.09006pt too wide) in paragraph at lines 289--290
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) Gener-ierung von Weg-punk-ten eine Pri-or-i
 sierung einzuprä-gen. Dadurch
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--318
+Underfull \hbox (badness 10000) in paragraph at lines 292--317
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--318
+Underfull \hbox (badness 10000) in paragraph at lines 292--317
 
  []
 
 
-Overfull \hbox (9.34262pt too wide) in paragraph at lines 293--318
+Overfull \hbox (9.34262pt too wide) in paragraph at lines 292--317
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) Simulationsframework zur Durch-führung der 
 Ex-per-i-mente in Nanonet 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--318
+Underfull \hbox (badness 10000) in paragraph at lines 292--317
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--318
+Underfull \hbox (badness 10000) in paragraph at lines 292--317
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--318
+Underfull \hbox (badness 10000) in paragraph at lines 292--317
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--318
+Underfull \hbox (badness 10000) in paragraph at lines 292--317
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--318
+Underfull \hbox (badness 10000) in paragraph at lines 292--317
 
  []
-
-
-Underfull \vbox (badness 7133) has occurred while \output is active []
-
 
 (/usr/local/texlive/2022/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
@@ -1336,11 +1330,11 @@ Package rerunfilecheck Info: File `sample-sigconf.out' has not changed.
 (rerunfilecheck)             Checksum: CE299A3E204BF5147694EE20FAB2517F;3278.
  ) 
 Here is how much of TeX's memory you used:
- 21003 strings out of 478268
- 344458 string characters out of 5846347
- 716503 words of memory out of 5000000
+ 21000 strings out of 478268
+ 344380 string characters out of 5846347
+ 717724 words of memory out of 5000000
  38259 multiletter control sequences out of 15000+600000
- 615023 words of font info for 321 fonts, out of 8000000 for 9000
+ 614750 words of font info for 319 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  84i,16n,131p,1011b,605s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
@@ -1361,7 +1355,7 @@ rtine/LinLibertineTI.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public
 /newtx/NewTXMI.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx
 /txexs.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/txmiaX.
 pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on sample-sigconf.pdf (7 pages, 2877322 bytes).
+Output written on sample-sigconf.pdf (7 pages, 2877929 bytes).
 PDF statistics:
  272 PDF objects out of 1000 (max. 8388607)
  191 compressed objects within 2 object streams
