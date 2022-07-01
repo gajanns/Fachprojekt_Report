@@ -361,6 +361,13 @@ Bei der reinen Ausführung des Codes hatten wir keine Probleme. Allerdings waren
   \caption{Erzeugter Boxplot aus der zweiten Replikation}
 \end{figure}
 
+\section{Zusammenfassung und Ausblick}
+Für Projekt 1 kann man am Ende festhalten, dass die Resultate unserer Algorithmen stark von der verwendeten Topologie abhängig waren. Zum Teil haben Topologien sogar gar nicht auf unsere Anpassungen der Algorithmen reagiert.
+Für die Zukunft wäre eine Betrachtung der Kombination unserer Ideen interessant. Die verschiedenen Ideen bringen für eine solche Kombination sowohl Vor- als auch Nachteile: \\
+So bringt die erste Idee den Vorteil, dass die Anzahl der verwendeten Waypoints nach oben hin abgesteckt wird. Andernfalls ist es allerdings auch schwer vorhersehbar, wie viele Iterationen die Greedy-WPO Komponente idealerweise laufen sollte. \\
+Der Sinn von Idee 2 für eine solche Kombination ist in Frage zu stellen: es bringt zwar eventuell Vorteile für die Anzahl der Iterationen, schneidet gegebenenfalls aber auch wichtige Waypoints ab und beeinflusst das Ergebnis eher negativ. Für eine Beschränkung $k$ der nutzbaren Waypoints war $MLU_{k}$ immer $\geq$ MLU. \\
+Der Vorteil von Idee 3 ist die Eliminierung von Priorisierung in der Generierung von W aypoints. Andernfalls sorgt Idee 3 für das Problem, dass vorher festgelegt werden muss, welche Kriterien man für die ideale Wahl für $K$ verwendet
+
 
 
 %%
