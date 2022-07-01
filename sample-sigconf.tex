@@ -244,9 +244,11 @@ konnten offensichtlich wichtige Wegpunkte aufgrund der Beschränkung nicht erzeu
 \end{figure}
 
 \subsection{Nodes-kWP-JointHeur}
-In unserer dritten Abwandlung betrachten wir ebenfalls eine Beschränkung der nutzbaren Wegpunkte, dieses mal jedoch auf einzelne Nodes und nicht auf die gesamte Topologie bezogen.
-Dazu führen wir für jede Node einen Counter ein und werten das Ergebnis für verschiedene Werte von k und verschiedene Topologien aus. Hierbei ist insbesonders interessant, welche Einfluss die verschiedenen Werte für $k$ auf die Performance haben und ob es sinnvoll und durchsetzbar ist, bestimmte Nodes durch $k=0$ zu meiden(und somit das gegenteilige eines Waypoints zu erzeugen).
-Ein Problem bei der Implementierung ist jedoch, geeignete Werte für $k$ zu finden. Welche Werte überhaupt gültig sind hängt von der Topologie ab und kann somit grundsätzlich nicht verallgemeinert werden. Daher muss man allgemeinere Regeln für $k$ verwenden und anhand derer die konkret verwendeten Werte abgeleitet werden.
+In unserer dritten Abwandlung betrachten wir ebenfalls eine Beschränkung der nutzbaren Wegpunkte, dieses Mal jedoch auf einzelne Knoten und nicht auf die gesamte Topologie bezogen.
+Ein Array $K$ ordnet jedem Knoten $v$ einen Parameter $k_v$ (im Folgenden allgemein als $k$ bezeichnet) zu, welcher angibt, wie oft dieser Knoten als Wegpunkt verwendet werden darf. Hierbei ist insbesondere interessant, welchen Einfluss die verschiedenen Werte für $k$ auf die Performance haben und ob es sinnvoll und durchsetzbar ist, bestimmte Nodes durch $k=0$ zu sperren, sodass diese nicht als Wegpunkt fungieren können.
+\\
+\\
+Ein Problem bei der Implementierung ist jedoch, geeignete Werte für $K$ zu finden. Welche Werte überhaupt gültig sind, hängt von der Topologie ab und kann somit grundsätzlich nicht verallgemeinert werden. Damit es trotzdem für alle Topologien einheitlich und leicht generierbar ist und weil uns insbesondere das Sperren von Knoten interessiert hat, haben wir uns in der praktischen Umsetzung haben dafür entschieden, jeden $c_{gen}$-ten (wobei $c_{gen} \in N$) Knoten beliebig oft als Wegpunkt zu erlauben und die anderen Knoten als Wegpunkte zu sperren ($k=0$). So sind z. B. bei  $c_{gen} = 4$ 75\% der Knoten gesperrt, während 25\% der Knoten beliebig oft als Wegpunkte verwendet werden dürfen. Im Folgenden sprechen wir auch von einer $\frac{1}{c}$-JointHeur.
 
 \begin{figure}[h]
   \centering
@@ -261,7 +263,7 @@ Ein Problem bei der Implementierung ist jedoch, geeignete Werte für $k$ zu find
   \caption{1/k-JointHeur für verschiedene Werte und realen demands}
 \end{figure}
 
-
+Wie sich anhand der Durchführung auf der Topologie Geant erkennen lässt, wird, obwohl für ein größeres $c_{gen}$ der Pool an Wegpunkten kleiner wird, das Ergebnis nicht zwingend schlechter. Der Grund dafür ist, dass auch bei einem größeren  $c_{gen}$ Wegpunkte nicht gesperrt sein können, die bei einem kleineren  $c_{gen}$ gesperrt sind. So sieht man z. B. in Abbildung 10, dass  1/5N-JointHeur besser als 1/4N-JointHeur performt.
 
 \begin{figure}[h]
   \centering
@@ -269,6 +271,7 @@ Ein Problem bei der Implementierung ist jedoch, geeignete Werte für $k$ zu find
   \caption{1/3N-JointHeur auf verschiedenen Topologien getestet}
 \end{figure}
 
+In Abbildung 11 wird nochmal deutlich, dass die 1/3N-JointHeur nicht zwingend schlechter als JointHeur. Es hängt auch von der gewählten Topologie ab.
 
 
 \section{Projekt 2 - Experimente in Mininet}
@@ -301,10 +304,18 @@ Für die Implementierung dieser Idee haben wir die Joint-Topologie verwendet, we
   \includegraphics[width=\linewidth]{abbildungen/22}
   \caption{Resultat von kWP-JointHeur}
 \end{figure}
+Wie in den Abbildungen 9 und 10 erkennbar
 Offensichtlich führt die schon das entfernen eines Waypoints zu einer deutlichen Rechtsverschiebung im Plot und somit zu einer Verschlechterung der MLU auf über 2.0.
 
+\subsection{Nodes-kWP-JointHeur}
 
+Ausgehend von den Resultaten zur dritten Abwandlung aus Projekt 1 haben wir uns als Leitfrage gestellt: Welche Knoten sollen gesperrt werden?
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{abbildungen/kWPnJoint.png}
+  \caption{Resultat von kWPn-JointHeur}
+\end{figure}
 
 
 \section{Replikation der Ergebnisse einer anderen Gruppe}
